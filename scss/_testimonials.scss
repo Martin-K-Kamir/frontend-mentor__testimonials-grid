@@ -23,14 +23,12 @@
   }
 
   @include breakpoint(max, $_bp-only-rows) {
-    @for $i from 1 through 5 {
-      grid-template-areas:
+    grid-template-areas:
       'item-1'
       'item-2'
       'item-3'
       'item-4'
       'item-5'
-    }
   }
 }
 
