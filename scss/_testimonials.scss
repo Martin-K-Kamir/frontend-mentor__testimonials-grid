@@ -6,7 +6,7 @@
   $_space: $size-xsm * $pow-to-size-sm; 
 
   padding-block: $_space;
-  width: min(95%, 112rem);
+  width: min(95%, 110rem);
   margin-inline: auto;
   display: grid;
   gap: $_space;
@@ -55,13 +55,13 @@
   box-shadow: 4rem 6rem 4.8rem -4.8rem clr-opacity($clr-secondary, 0.25);
 
   &--quote {
-    background-image: url('./images/bg-pattern-quotation.svg');
+    background-image: url('../images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
-    background-position: top right 10%;
+    background-position: top right 18%;
   }
 
   & > *:where(:not(:first-child)) {
-    margin-top: 1em;
+    margin-top: $size-xxsm * $pow-to-size-m;
   }
 
   & > p:first-of-type {

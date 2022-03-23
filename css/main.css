@@ -96,7 +96,7 @@ h3 {
 
 .testimonial-container {
   padding-block: 2.8rem;
-  width: min(95%, 112rem);
+  width: min(95%, 110rem);
   margin-inline: auto;
   display: grid;
   gap: 2.8rem;
@@ -110,10 +110,6 @@ h3 {
 }
 @media (max-width: 50em) {
   .testimonial-container {
-    grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
-    grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
-    grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
-    grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
     grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
   }
 }
@@ -150,12 +146,12 @@ h3 {
   background-color: white;
 }
 .testimonial--quote {
-  background-image: url("./images/bg-pattern-quotation.svg");
+  background-image: url("../images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-position: top right 10%;
+  background-position: top right 18%;
 }
 .testimonial > *:where(:not(:first-child)) {
-  margin-top: 1em;
+  margin-top: 1.6rem;
 }
 .testimonial > p:first-of-type {
   font-size: 2rem;

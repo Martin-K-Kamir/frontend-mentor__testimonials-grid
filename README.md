@@ -17,7 +17,7 @@ I chose this project to test scss with css grid for looping
 
 ### Links
 
-- Live Site URL - [Link](https://sunnyside-martin-kamir.netlify.app/)
+- Live Site URL - [Link](https://testimonials-grid-martin-kamir.netlify.app/)
 - Website - [Martin Kamír](https://martinkamir.com/)
 - Frontend Mentor - [@Martin-K-Kamir](https://www.frontendmentor.io/profile/Martin-K-Kamir)
 - Frontend Mentor Solution - [Solution link](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef)
