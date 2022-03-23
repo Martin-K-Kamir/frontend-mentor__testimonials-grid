@@ -1,0 +1,99 @@
+@use 'sass:string';
+
+.testimonial-container {
+  $_bp-3-rows: to-em(1000px);
+  $_bp-only-rows: to-em(800px);
+  $_space: $size-xsm * $pow-to-size-sm; 
+
+  padding-block: $_space;
+  width: min(95%, 112rem);
+  margin-inline: auto;
+  display: grid;
+  gap: $_space;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'item-1 item-1 item-2 item-5'
+    'item-3 item-4 item-4 item-5';
+
+  @include breakpoint(max, $_bp-3-rows) {
+    grid-template-areas:
+    'item-1 item-1 item-2'
+    'item-3 item-4 item-4'
+    'item-5 item-5 item-5';
+  }
+
+  @include breakpoint(max, $_bp-only-rows) {
+    @for $i from 1 through 5 {
+      grid-template-areas:
+      'item-1'
+      'item-2'
+      'item-3'
+      'item-4'
+      'item-5'
+    }
+  }
+}
+
+.testimonial {
+  $_grid-item-styles: (
+    item-1: (color: $clr-white, background-color: $clr-primary),
+    item-2: (color: $clr-white, background-color: $clr-secondary),
+    item-3: (color: $clr-secondary, background-color: $clr-white),
+    item-4: (color: $clr-white, background-color: $clr-secondary-100),
+    item-5: (color: $clr-secondary, background-color: $clr-white)
+  );
+
+  @each $grid-item, $map in $_grid-item-styles {
+      &:nth-of-type(#{string.slice(#{$grid-item}, -1)}) {
+        grid-area: $grid-item;
+        color: map-get($map, color);
+        background-color: map-get($map, background-color);
+      }
+  }
+
+  font-size: $fs-m;
+  padding: $size-xsm + $pow-to-size-min;
+  border-radius: 0.8rem;
+  box-shadow: 4rem 6rem 4.8rem -4.8rem clr-opacity($clr-secondary, 0.25);
+
+  &--quote {
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+  }
+
+  & > *:where(:not(:first-child)) {
+    margin-top: 1em;
+  }
+
+  & > p:first-of-type {
+    font-size: $fs-max;
+    line-height: 1.2;
+  }
+
+  & > p:last-of-type {
+    opacity: 0.7;
+  }
+
+  &__client {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__avatar {
+    width: 2.8rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: $fs-m;
+    font-weight: $fw-min;
+    line-height: 1;
+  }
+
+  &__role {
+    font-size: $fs-min;
+    opacity: 0.5;
+  }
+}

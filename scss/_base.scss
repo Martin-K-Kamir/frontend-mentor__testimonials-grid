@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font-primary;
+  font-weight: $fw-min;
+  background-color: $clr-white-900;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $fw-max;
+}
+
+.body-container {
+  display: grid;
+  place-content: center;
+}
